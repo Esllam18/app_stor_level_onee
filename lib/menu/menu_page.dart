@@ -26,7 +26,6 @@ class MenuViewBody extends StatefulWidget {
 }
 
 class _MenuViewBodyState extends State<MenuViewBody> {
-  // قائمة فئات المنتجات (يمكن استبدالها ببيانات ديناميكية)
   final List<Map<String, String>> categories = [
     {'name': 'Fruits', 'image': 'assets/images/fruits.png'},
     {'name': 'Vegetables', 'image': 'assets/images/vegetables.png'},
@@ -40,7 +39,6 @@ class _MenuViewBodyState extends State<MenuViewBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // قسم البحث
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
@@ -54,12 +52,9 @@ class _MenuViewBodyState extends State<MenuViewBody> {
                   borderSide: BorderSide.none,
                 ),
               ),
-              onChanged: (value) {
-                // يمكن إضافة منطق البحث هنا (مثل تصفية الفئات)
-              },
+              onChanged: (value) {},
             ),
           ),
-          // قسم الفئات
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
@@ -82,7 +77,6 @@ class _MenuViewBodyState extends State<MenuViewBody> {
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: GestureDetector(
                     onTap: () {
-                      // يمكن إضافة التنقل إلى صفحة الفئة
                       Navigator.pushNamed(
                         context,
                         '/category/${categories[index]['name']}',
@@ -119,7 +113,6 @@ class _MenuViewBodyState extends State<MenuViewBody> {
             ),
           ),
           const SizedBox(height: 24),
-          // قسم الروابط السريعة
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(

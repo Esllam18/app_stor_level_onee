@@ -121,7 +121,6 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
               leading: const Icon(Icons.person, color: Colors.green),
               title: const Text('Edit Profile'),
               onTap: () {
-                // يمكن إضافة التنقل إلى صفحة تعديل الملف الشخصي
                 Navigator.pushNamed(context, '/edit_profile');
               },
             ),
@@ -129,7 +128,6 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
               leading: const Icon(Icons.lock, color: Colors.green),
               title: const Text('Change Password'),
               onTap: () {
-                // يمكن إضافة التنقل إلى صفحة تغيير كلمة المرور
                 Navigator.pushNamed(context, '/change_password');
               },
             ),
@@ -137,16 +135,14 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
               leading: const Icon(Icons.notifications, color: Colors.green),
               title: const Text('Notifications'),
               trailing: Switch(
-                value: true, // يمكن جعلها ديناميكية باستخدام متغير حالة
+                value: true,
                 onChanged: (value) {
-                  // منطق التحكم في الإشعارات
                   setState(() {});
                 },
                 activeColor: Colors.green,
               ),
             ),
             const Divider(height: 32),
-            // قسم تسجيل الخروج
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: ListTile(
